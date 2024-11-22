@@ -21,7 +21,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the nessasary things for Forge to be setup.
 
-version = "0.0.2"
+version = "0.0.3"
 group= "eyeofdragons"
 archivesBaseName = "eyeofdragons"
 sourceCompatibility = targetCompatibility = "1.8"
@@ -65,8 +65,8 @@ repositories {
 }
 
 dependencies {
-//    deobfCompile "net.ilexiconn:llibrary:1.7.9-1.12.2"
-    compile 'ice-and-fire-dragons:iceandfire:1.7.1:1.12.2'
+    // Use the local JAR file instead of the remote dependency
+    compile files('lib/Ice and Fire-2.0.5.jar')
 }
 
 processResources

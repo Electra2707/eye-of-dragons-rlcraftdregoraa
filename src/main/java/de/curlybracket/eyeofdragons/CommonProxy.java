@@ -17,6 +17,7 @@ public class CommonProxy {
     public static void registerEntities(RegistryEvent.Register<EntityEntry> event) {
         registerUnspawnable(EntityEntryBuilder.<EntityFireDragonEye>create(), event, EntityFireDragonEye.class, "eye_of_firedragon", 47);
         registerUnspawnable(EntityEntryBuilder.<EntityIceDragonEye>create(), event, EntityIceDragonEye.class, "eye_of_icedragon", 48);
+        registerUnspawnable(EntityEntryBuilder.<EntityLightningDragonEye>create(), event, EntityLightningDragonEye.class, "eye_of_lightningdragon", 49);
     }
 
     public static void registerUnspawnable(EntityEntryBuilder builder, RegistryEvent.Register<EntityEntry> event, Class<? extends Entity> entityClass, String name, int id) {

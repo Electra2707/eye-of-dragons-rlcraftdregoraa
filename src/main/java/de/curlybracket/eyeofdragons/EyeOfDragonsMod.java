@@ -18,7 +18,7 @@ public class EyeOfDragonsMod
 {
     public static final String MODID = "eyeofdragons";
     public static final String NAME = "Eye of Dragons";
-    public static final String VERSION = "0.0.1";
+    public static final String VERSION = "0.0.3";
 
     private static Logger logger;
     @SidedProxy(clientSide = "de.curlybracket.eyeofdragons.ClientProxy", serverSide = "de.curlybracket.eyeofdragons.CommonProxy")

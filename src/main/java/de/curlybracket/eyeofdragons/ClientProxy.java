@@ -20,6 +20,8 @@ public class ClientProxy extends CommonProxy {
         ModelLoader.setCustomModelResourceLocation(ModItems.eye_of_firedragon, 1, new ModelResourceLocation(EyeOfDragonsMod.MODID + ":eye_of_firedragon", "inventory"));
         ModelLoader.setCustomModelResourceLocation(ModItems.eye_of_icedragon, 0, new ModelResourceLocation(EyeOfDragonsMod.MODID + ":eye_of_icedragon", "inventory"));
         ModelLoader.setCustomModelResourceLocation(ModItems.eye_of_icedragon, 1, new ModelResourceLocation(EyeOfDragonsMod.MODID + ":eye_of_icedragon", "inventory"));
+        ModelLoader.setCustomModelResourceLocation(ModItems.eye_of_lightningdragon, 0, new ModelResourceLocation(EyeOfDragonsMod.MODID + ":eye_of_lightningdragon", "inventory"));
+        ModelLoader.setCustomModelResourceLocation(ModItems.eye_of_lightningdragon, 1, new ModelResourceLocation(EyeOfDragonsMod.MODID + ":eye_of_lightningdragon", "inventory"));
     }
 
     @SideOnly(Side.CLIENT)
@@ -34,5 +36,6 @@ public class ClientProxy extends CommonProxy {
     private void renderEntities() {
         RenderingRegistry.registerEntityRenderingHandler(EntityFireDragonEye.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(), ModItems.eye_of_firedragon, Minecraft.getMinecraft().getRenderItem()));
         RenderingRegistry.registerEntityRenderingHandler(EntityIceDragonEye.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(), ModItems.eye_of_icedragon, Minecraft.getMinecraft().getRenderItem()));
+        RenderingRegistry.registerEntityRenderingHandler(EntityLightningDragonEye.class, new RenderSnowball(Minecraft.getMinecraft().getRenderManager(), ModItems.eye_of_lightningdragon, Minecraft.getMinecraft().getRenderItem()));
     }
 }

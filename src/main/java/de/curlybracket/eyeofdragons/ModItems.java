@@ -9,4 +9,8 @@ public class ModItems {
 
     @GameRegistry.ObjectHolder(EyeOfDragonsMod.MODID + ":eye_of_icedragon")
     public static Item eye_of_icedragon = new ItemIceDragonEye();
+
+    @GameRegistry.ObjectHolder(EyeOfDragonsMod.MODID + ":eye_of_lightningdragon")
+    public static Item eye_of_lightningdragon = new ItemLightningDragonEye();
+
 }
