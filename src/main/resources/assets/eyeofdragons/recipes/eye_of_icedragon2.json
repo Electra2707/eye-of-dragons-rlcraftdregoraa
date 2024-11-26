@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:ender_eye"
+    },
+    {
+      "item": "iceandfire:ice_dragon_flesh"
+    },
+    {
+      "item": "iceandfire:ice_dragon_flesh"
+    },
+    {
+      "item": "iceandfire:ice_dragon_flesh"
+    }
+  ],
+  "result": {
+    "item": "eyeofdragons:eye_of_icedragon",
+    "count": 1
+  }
+}
