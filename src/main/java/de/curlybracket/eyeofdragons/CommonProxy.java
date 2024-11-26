@@ -15,13 +15,18 @@ import java.lang.reflect.Field;
 public class CommonProxy {
     @SubscribeEvent
     public static void registerEntities(RegistryEvent.Register<EntityEntry> event) {
-        registerUnspawnable(EntityEntryBuilder.<EntityFireDragonEye>create(), event, EntityFireDragonEye.class, "eye_of_firedragon", 47);
-        registerUnspawnable(EntityEntryBuilder.<EntityIceDragonEye>create(), event, EntityIceDragonEye.class, "eye_of_icedragon", 48);
-        registerUnspawnable(EntityEntryBuilder.<EntityLightningDragonEye>create(), event, EntityLightningDragonEye.class, "eye_of_lightningdragon", 49);
-        registerUnspawnable(EntityEntryBuilder.<EntityHydraEye>create(), event, EntityHydraEye.class, "eye_of_hydra", 50);
+        registerUnspawnable(EntityEntryBuilder.<EntityFireDragonEye>create(), event, EntityFireDragonEye.class,
+                "eye_of_firedragon", 47);
+        registerUnspawnable(EntityEntryBuilder.<EntityIceDragonEye>create(), event, EntityIceDragonEye.class,
+                "eye_of_icedragon", 48);
+        registerUnspawnable(EntityEntryBuilder.<EntityLightningDragonEye>create(), event,
+                EntityLightningDragonEye.class, "eye_of_lightningdragon", 49);
+        registerUnspawnable(EntityEntryBuilder.<EntityHydraEye>create(), event, EntityHydraEye.class, "eye_of_hydra",
+                50);
     }
 
-    public static void registerUnspawnable(EntityEntryBuilder builder, RegistryEvent.Register<EntityEntry> event, Class<? extends Entity> entityClass, String name, int id) {
+    public static void registerUnspawnable(EntityEntryBuilder builder, RegistryEvent.Register<EntityEntry> event,
+            Class<? extends Entity> entityClass, String name, int id) {
         id += 1500;
         builder.entity(entityClass);
         builder.id(new ResourceLocation(EyeOfDragonsMod.MODID, name), id);
@@ -36,9 +41,13 @@ public class CommonProxy {
             for (Field f : ModItems.class.getDeclaredFields()) {
                 Object obj = f.get(null);
                 if (obj instanceof Item) {
+                    ((Item) obj).setCreativeTab(ModCreativeTabs.EYE_OF_DRAGONS_TAB); // Set the creative tab for the
+                                                                                     // item
                     event.getRegistry().register((Item) obj);
                 } else if (obj instanceof Item[]) {
                     for (Item item : (Item[]) obj) {
+                        item.setCreativeTab(ModCreativeTabs.EYE_OF_DRAGONS_TAB); // Set the creative tab for each item
+                                                                                 // in the array
                         event.getRegistry().register(item);
                     }
                 }
